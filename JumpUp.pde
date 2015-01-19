@@ -1,3 +1,10 @@
+/**
+*  JumpUp 
+*  BY Chris Jimenez
+*  ****music credit does not go to nintendo
+*/
+
+
 import ddf.minim.spi.*;
 import ddf.minim.signals.*;
 import ddf.minim.*;
@@ -5,8 +12,7 @@ import ddf.minim.analysis.*;
 import ddf.minim.ugens.*;
 import ddf.minim.effects.*;
 
-//load up sound files
-//****music credit does not go to me but to nintendo
+// load up sound files
 Minim minim;
 AudioPlayer startUpSong;
 AudioPlayer marioGameMusic;
