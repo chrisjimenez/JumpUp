@@ -32,4 +32,11 @@ The enemies follow the same physics as the player. So when they encounter a hole
 It should be noted that all sounds and theme music were found online so the credit should go to Nintendo and/or the individuals that provided these mp3s. So with that said, here is some of the sounds I used in the game that I got online.
 
 ### Gameplay
-For some reason I’m having a hard time displaying a playable version of the game here, but as soon as I get the problem resolved, it will be posted. For the mean time, you can check out some screen shots below or check out some gameplay footage here.
+For some reason I’m having a hard time displaying a playable version of the game here, but as soon as I get the problem resolved, it will be posted. For the mean time, you can check out some check out some gameplay footage below.
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=MUOyrIigiyI
+" target="_blank"><img src="http://img.youtube.com/vi/MUOyrIigiyI/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
+
+<iframe width="420" height="315" src="//www.youtube.com/embed/MUOyrIigiyI" frameborder="0" allowfullscreen></iframe>
