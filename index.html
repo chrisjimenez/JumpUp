@@ -51,11 +51,11 @@
     <h3 >Game Description</h3>
 
       <p>
-        The game is called <strong>Jump Up</strong>. The game has “floors” or platforms that  continuously move down and after a certain period, reverse and move up. Your objective, as the player, is to jump up or jump down to each floor to avoid touching the bottom and top of the screen. Once you touch the bottom or top of the screen, you lose. Also, there will be enemies, which changes based on which character you choose, that will be moving on the floors with you, but you must avoid them otherwise you lose. With all that said, you get points by collecting as much coins as you can while staying alive.
+        The game is called <strong>Jump Up</strong>. You could pick one of the three familiar Nintendo characters-<strong>Mario, Donkey Kong, or Kirby</strong>. The game has “floors” or platforms that move up and down with increasing speed. Your objective is to jump up or run down to each floor to avoid touching the bottom and top of the screen. Once you touch the bottom or top of the screen, you lose. Also, there will be enemies that will be moving on the floors with you, but you must avoid them otherwise you lose. <em>With all that said, you get points by collecting as much coins as you can while staying in the middle and staying alive.</em>
       </p>
 
       <p>
-        You have the option to pick one of the three memorable Nintendo characters-<strong>Mario, Donkey Kong, or Kirby</strong>. Based on who you choose as your character, the settings of the game will change based on that character. And the enemies will also change based on that character. For example, if you choose Mario, the floors will look like the ground seen in most Mario games and the enemies would be the turtles, also seen in the Mario games. There is no time limit for the game, since eventually the floors velocity will be so fast that you will lose(unless your’e pretty good). The whole idea is to collect as much coins as you can while alive.
+        Based on who you choose as your character, the settings and enemies of the game will change based on that character. For example, if you choose Mario, the floors will look like the ground seen in most Mario games and the enemies would be the turtles. There is no time limit for the game, since eventually the floors velocity will be so fast that you will lose(unless your’re pretty good!). The whole idea is to collect as much coins as you can while alive.
       </p>
 
     <br>
@@ -71,32 +71,32 @@
       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
       <div style ="text-align:center">
         <iframe width="480" height="360" src="https://www.youtube.com/embed/MUOyrIigiyI" frameborder="1" allowfullscreen style" margin:auto">
-          Looks like the YouTube vidoe cant be displayed :/, you could check out the video
+          Looks like the YouTube video cant be displayed :/, you could check out the video
           at https://www.youtube.com/watch?feature=player_embedded&v=MUOyrIigiyI
         </iframe>
       </div>
+
+      <img src = " images/"/>
+      <img src = " images/"/>
+      <img src = " images/"/>
     
     <h3>Problem(s)</h3>
       <p>
-        The first major problem that I encountered with the game was, surprisingly, the replication of the Mario physics that we are all familiar with. Originally I thought this would be the easiest part since I can update the coordinate position of the player using xSpeed and ySpeed and implement the y-acceleration and x-acceleration in that way. But for some reason it wasn’t coming out correctly. Eventually after playing with many values for the y-acceleration and jumping sequence, I managed to create a playable physics environment that’s not exactly like the Mario’s physics environment, but similar.
+        The first major problem that I had with the game was the replication of the Mario game physics. Originally I thought this would be the easiest part since I can update the coordinate position of the player using xSpeed and ySpeed and implement the y-acceleration and x-acceleration in that way. But for some reason it wasn’t coming out correctly. Eventually after playing with many values for the y-acceleration and jumping sequence, I managed to create a playable physics environment that’s not exactly like the Mario’s physics environment, but similar. I could've also used the Fisica 2D physics engine for Processing but I wanted to work out the physics myself.
       </p>
 
       <p>
-        The second major problem that I encountered with the game was the restriction of the coordinated position of the player while between floors, which also created the platform on each floor. Originally, the only position on the floor that the player is able to go through is the “hole.” And the whole idea for the original game was for the player to only jump up through these holes. I tried using the constrain() method to constrain the y-position of the player between each floor IF the player was between those floors.
-      </p>
-
-      <p>
-        However, even with the constrain() method, the player could still jump through the floors. I tried using many other methods but for some reason it only works if the player is on top of a floor not under. This is when I started deviating from the original idea and started coming up with a unique kind of game where the player could jump through floors, but if they’re going down they must go through the holes.
+        The second major problem that I encountered with the game was the restriction of the  position of the player while between floors, which also created the platform on each floor. Originally, the only position on the floor that the player was able to go through was the “hole.” And the whole idea for the original game was for the player to only jump up through these holes. I tried using the constrain() method to constrain the y-position of the player between each floor IF the player was between those floors. However, even with the constrain() method, the player could still jump through the floors.. This is when I started deviating from the original idea and started coming up with a unique kind of game where <em>the player could jump through floors, but if they’re going down they must go through the holes.</em>
       </p>
 
     <h3>Floor and Enemy Mechanics</h3>
 
       <p>
-        As mentioned, originally I wanted the floors to keep moving down( simulating the screen going up). Additionally, I wanted the floors to move in a constant velocity, aka no acceleration. But as I kept playing with the mechanics of the game, I figured it would be interesting to have the floors not only move up, but to also move down. And as time progresses, the floors will move up and down at higher velocities.
+        I originally wanted the floors to move in a constant velocity, aka no acceleration. But as I kept playing with the mechanics of the game, I figured it would be interesting to have the floors not only move up, but to also move down and in increasing velocity.
       </p>
 
       <p>
-        The enemies follow the same physics as the player. So when they encounter a hole, they would fall just like the player would. The enemies move randomly, so when you move floor to floor you have to be careful and not touch the enemies. This is going to be hard because their movements are unpredictable.
+        The enemies follow the same physics as the player. So when they encounter a hole, they would fall just like the player would. They also move randomly, so their behavior is unpredictable. 
       </p>
 
     <h3>Sounds</h3>
