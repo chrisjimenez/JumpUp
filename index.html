@@ -1,8 +1,201 @@
-<!DOCTYPE html>
+<!-- Basic Page Needs
+  By: Chris Jimenez
+  
+  Project site for JumpUp Project.
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Specific metas 
+    –––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- js libs 
+    –––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script type="text/javascript" src ="libs/processing.min.js"></script>
+    <script type="text/javascript" src ="libs/minim.js"></script>
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Orbitron:400,700' rel='stylesheet' type='text/css'>
+    
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <title>Jump Up Project Site</title>
   </head>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <body>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Jump Up</h1>
+        <h6>Project Site</h6>
+      </div>
+    </div>
+
+	  <!-- Description + Canvas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <h3 >Game Description</h3>
+
+      <p>
+        The game is called <strong>Jump Up</strong>. The game has “floors” or platforms that  continuously move down and after a certain period, reverse and move up. Your objective, as the player, is to jump up or jump down to each floor to avoid touching the bottom and top of the screen. Once you touch the bottom or top of the screen, you lose. Also, there will be enemies, which changes based on which character you choose, that will be moving on the floors with you, but you must avoid them otherwise you lose. With all that said, you get points by collecting as much coins as you can while staying alive.
+      </p>
+
+      <p>
+        You have the option to pick one of the three memorable Nintendo characters-<strong>Mario, Donkey Kong, or Kirby</strong>. Based on who you choose as your character, the settings of the game will change based on that character. And the enemies will also change based on that character. For example, if you choose Mario, the floors will look like the ground seen in most Mario games and the enemies would be the turtles, also seen in the Mario games. There is no time limit for the game, since eventually the floors velocity will be so fast that you will lose(unless your’e pretty good). The whole idea is to collect as much coins as you can while alive.
+      </p>
+
+    <br>
+    <h3>The Game!</h3>
+
+      <canvas id = "JumpUp" data-processing-sources="JumpUp/JumpUp.pde JumpUp/Animation.pde JumpUp/Bug.pde JumpUp/Coin.pde JumpUp/DkFloor.pde JumpUp/DonkeyKong.pde JumpUp/DonkeyKongGame.pde JumpUp/Enemy.pde JumpUp/Floor.pde JumpUp/Game.pde JumpUp/Gator.pde JumpUp/ImageButton.pde JumpUp/Kirby.pde JumpUp/KirbyFloor.pde JumpUp/KirbyGame.pde JumpUp/Mario.pde JumpUp/MarioFloor.pde JumpUp/MarioGame.pde JumpUp/Player.pde JumpUp/Turtle.pde">
+        :/ Looks like your browser doesn't support the HTML5 canvas tag.
+      </canvas>
+    <br>
+
+    <h3>Screenshots/Video Demo</h3>
+      <!-- Video Demo
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div style ="text-align:center">
+        <iframe width="480" height="360" src="https://www.youtube.com/embed/MUOyrIigiyI" frameborder="1" allowfullscreen style" margin:auto">
+          Looks like the YouTube vidoe cant be displayed :/, you could check out the video
+          at https://www.youtube.com/watch?feature=player_embedded&v=MUOyrIigiyI
+        </iframe>
+      </div>
+    
+    <h3>Problem(s)</h3>
+      <p>
+        The first major problem that I encountered with the game was, surprisingly, the replication of the Mario physics that we are all familiar with. Originally I thought this would be the easiest part since I can update the coordinate position of the player using xSpeed and ySpeed and implement the y-acceleration and x-acceleration in that way. But for some reason it wasn’t coming out correctly. Eventually after playing with many values for the y-acceleration and jumping sequence, I managed to create a playable physics environment that’s not exactly like the Mario’s physics environment, but similar.
+      </p>
+
+      <p>
+        The second major problem that I encountered with the game was the restriction of the coordinated position of the player while between floors, which also created the platform on each floor. Originally, the only position on the floor that the player is able to go through is the “hole.” And the whole idea for the original game was for the player to only jump up through these holes. I tried using the constrain() method to constrain the y-position of the player between each floor IF the player was between those floors.
+      </p>
+
+      <p>
+        However, even with the constrain() method, the player could still jump through the floors. I tried using many other methods but for some reason it only works if the player is on top of a floor not under. This is when I started deviating from the original idea and started coming up with a unique kind of game where the player could jump through floors, but if they’re going down they must go through the holes.
+      </p>
+
+    <h3>Floor and Enemy Mechanics</h3>
+
+      <p>
+        As mentioned, originally I wanted the floors to keep moving down( simulating the screen going up). Additionally, I wanted the floors to move in a constant velocity, aka no acceleration. But as I kept playing with the mechanics of the game, I figured it would be interesting to have the floors not only move up, but to also move down. And as time progresses, the floors will move up and down at higher velocities.
+      </p>
+
+      <p>
+        The enemies follow the same physics as the player. So when they encounter a hole, they would fall just like the player would. The enemies move randomly, so when you move floor to floor you have to be careful and not touch the enemies. This is going to be hard because their movements are unpredictable.
+      </p>
+
+    <h3>Sounds</h3>
+
+      <p>
+        It should be noted that all sounds and theme music were found online so the credit should go to Nintendo and/or the individuals that provided these mp3s. So with that said, here is some of the sounds I used in the game.
+      </p>
+
+
+      <!-- Sound Table
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <table class="table table-condensed">
+        <thead>
+          <tr>
+            <th style = "text-align:center">Sound</th>
+            <th style = "text-align:center">File</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Mario Theme Song</td>
+            <td>
+              <audio controls>
+                <source src="assets/marioTheme.ogg" type="audio/ogg">
+                <source src="assets/marioTheme.mp3" type="audio/mpeg">
+                 Your browser does not support the audio element.
+              </audio>          
+            </td>
+          </tr>
+          <tr>
+            <td>Donkey Kong Theme Song</td>
+            <td>
+              <audio controls>
+                <source src="assets/dkTheme.ogg" type="audio/ogg">
+                <source src="assets/dkTheme.mp3" type="audio/mpeg">
+                 Your browser does not support the audio element.
+              </audio> 
+            </td>
+          </tr>
+          <tr>
+            <td>Kirby Theme Song</td>
+            <td>
+              <audio controls>
+                <source src="assets/kirbyTheme.ogg" type="audio/ogg">
+                <source src="assets/kirbyTheme.mp3" type="audio/mpeg">
+                 Your browser does not support the audio element.
+              </audio> 
+            </td>
+          </tr>
+          <tr>
+            <td>Coin</td>
+            <td>
+              <audio controls>
+                <source src="assets/coin.ogg" type="audio/ogg">
+                <source src="assets/coin.mp3" type="audio/mpeg">
+                 Your browser does not support the audio element.
+              </audio> 
+            </td>
+          </tr>
+          <tr>
+            <td>Losing</td>
+            <td>
+              <audio controls>
+                <source src="assets/deadSound.ogg" type="audio/ogg">
+                <source src="assets/deadSound.mp3" type="audio/mpeg">
+                 Your browser does not support the audio element.
+              </audio> 
+            </td>
+          </tr>
+          <tr>            
+            <td>Jump</td>
+            <td>
+              <audio controls>
+                <source src="assets/jump.ogg" type="audio/ogg">
+                <source src="assets/jump.mp3" type="audio/mpeg">
+                 Your browser does not support the audio element.
+              </audio> 
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+	  <!-- Footer
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <hr>
+
+      <button type="button" class="btn btn-link" onclick ="window.location.href='https://www.chrisjim.com'">
+          <img class ="icon" src="images/me_icon.png"/><span>Personal Account</span>
+      </button>
+
+      <button type="button" class="btn btn-link" onclick ="window.location.href='https://www.github.com/chrisjimenez'" >
+          <img class ="icon" src="images/github_icon.png"/><span>Github Account</span>
+      </button>
+    
+   </hr>
+
+  <!-- End of Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
   </body>
 </html>
+

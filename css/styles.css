@@ -1,0 +1,67 @@
+/*
+* By: Chris Jimenez
+*
+* CSS for Predator vs. Prey project site
+*/
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding: 20px;
+    background: #0099FF;
+      font-family: 'Quicksand', sans-serif;
+
+}
+
+.jumbotron {
+  background-color: red;
+  color: white;
+
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1em;
+  text-align: center;
+  font-weight: bold;
+
+  height: 15em;
+  box-shadow: -5px 5px 5px #000000;
+  margin-top: 0px;
+}
+
+#JumpUp {
+    display: block;
+    margin: auto;
+}
+
+img {
+	display:block;
+	margin: auto;
+	border: 1px solid grey;
+}
+
+.icon{
+	float: left;
+	width: 2em;
+	height: 2em;
+	margin: auto;
+}
+
+h3{
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+
+.table-condensed{
+  background-color: #A8A8A8 ;
+  width: auto;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+.btn {
+  display:block;
+}
+span{
+  color: white;
+  padding: 0.5em;
+}
