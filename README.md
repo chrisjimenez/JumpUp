@@ -24,7 +24,7 @@ I originally wanted the floors to move in a constant velocity, aka no accelerati
 The enemies follow the same physics as the player. So when they encounter a hole, they would fall just like the player would. They also move randomly, so their behavior is unpredictable. 
 
 ### Sounds
-        It should be noted that all sounds and theme music were found online so the credit should go to Nintendo and/or the individuals that provided these mp3s.
+It should be noted that all sounds and theme music were found online so the credit should go to Nintendo and/or the individuals that provided these mp3s.
 
 ### Game
 You could play the game [here](http://chrisjimenez.github.io/JumpUp/)!
