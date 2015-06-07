@@ -1,20 +1,12 @@
-<!-- Basic Page Needs
+<!DOCTYPE html>
+<!-----------------------------------------------
   By: Chris Jimenez
-  
   Project site for JumpUp Project.
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-
-<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Basic Page Needs
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- Mobile Specific metas 
-    –––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- js libs 
@@ -38,7 +30,6 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <body>
-    <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
         <h1>Jump Up</h1>
@@ -61,7 +52,7 @@
     <br>
     <h3>The Game!</h3>
 
-      <canvas id = "JumpUp" data-processing-sources="JumpUp/JumpUp.pde JumpUp/Animation.pde JumpUp/Bug.pde JumpUp/Coin.pde JumpUp/DkFloor.pde JumpUp/DonkeyKong.pde JumpUp/DonkeyKongGame.pde JumpUp/Enemy.pde JumpUp/Floor.pde JumpUp/Game.pde JumpUp/Gator.pde JumpUp/ImageButton.pde JumpUp/Kirby.pde JumpUp/KirbyFloor.pde JumpUp/KirbyGame.pde JumpUp/Mario.pde JumpUp/MarioFloor.pde JumpUp/MarioGame.pde JumpUp/Player.pde JumpUp/Turtle.pde">
+      <canvas id = "JumpUp" data-processing-sources="src/JumpUp.pde src/Animation.pde src/Bug.pde src/Coin.pde src/DkFloor.pde src/DonkeyKong.pde src/DonkeyKongGame.pde src/Enemy.pde src/Floor.pde src/Game.pde src/Gator.pde src/ImageButton.pde src/Kirby.pde src/KirbyFloor.pde src/KirbyGame.pde src/Mario.pde src/MarioFloor.pde src/MarioGame.pde src/Player.pde src/Turtle.pde">
         :/ Looks like your browser doesn't support the HTML5 canvas tag.
       </canvas>
     <br>
@@ -76,9 +67,13 @@
         </iframe>
       </div>
 
-      <img src = " images/"/>
-      <img src = " images/"/>
-      <img src = " images/"/>
+      <img class ="screenshot" src = "images/ss1.png"/>
+      <br>
+      <img class ="screenshot" src = "images/ss2.png"/>     
+      <br>
+      <img class ="screenshot" src = "images/ss3.png"/>
+      <br>
+      <img class ="screenshot" src = "images/ss4.png"/>
     
     <h3>Problem(s)</h3>
       <p>
@@ -180,19 +175,14 @@
         </tbody>
       </table>
 
-	  <!-- Footer
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <hr>
-
-      <button type="button" class="btn btn-link" onclick ="window.location.href='https://www.chrisjim.com'">
-          <img class ="icon" src="images/me_icon.png"/><span>Personal Account</span>
-      </button>
-
-      <button type="button" class="btn btn-link" onclick ="window.location.href='https://www.github.com/chrisjimenez'" >
-          <img class ="icon" src="images/github_icon.png"/><span>Github Account</span>
-      </button>
-    
-   </hr>
+      <!-- Footer
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <hr>
+      <div class = "footer">
+        <a href = "https://github.com/chrisjimenez/jumpup"> 
+          <img src ="images/github-icon.png" />
+        </a>
+      </div>
 
   <!-- End of Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– --> 
