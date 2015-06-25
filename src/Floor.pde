@@ -140,13 +140,8 @@ class Floor {
   * Returns if given x,y position is on top of floor.
   */
   boolean isOnFloor(float x, float y) {
-    if (((y < yPos) &&( y > yPos-spaceBwFl))
-      &&((x < holeXPos) || (x >holeXPos+holeWidth))) {
-      return true;
-    }
-    else {
-      return false;
-    }
+    return ((y < yPos) && (y > yPos - spaceBwFl)) &&
+           ((x < holeXPos) || (x > holeXPos + holeWidth))
   }
 
   /**

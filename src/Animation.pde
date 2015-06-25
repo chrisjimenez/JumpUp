@@ -1,6 +1,6 @@
 /***
 *  Class for animating a sequence of GIFs
-*  ** Credit given to James Paterson, from the Processing website
+*  Credit given to James Paterson, from the Processing website
 */
 
 class Animation {
